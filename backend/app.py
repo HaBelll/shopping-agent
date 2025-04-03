@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # 클로바X 테스트 API 키
-API_KEY = "nv-82b188808949451287735835b5817405PIbv"
+API_KEY = "api키 붙여넣기"
 API_URL = "https://clovastudio.stream.ntruss.com/testapp/v1/chat-completions/HCX-DASH-001"
 
 
