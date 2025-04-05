@@ -1,14 +1,21 @@
 import traceback
 import requests
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+
+
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
 
 # 클로바X 테스트 API 키
-API_KEY = "api키 붙여넣기"
-API_URL = "https://clovastudio.stream.ntruss.com/testapp/v1/chat-completions/HCX-DASH-001"
+
+API_KEY = os.getenv("CLOVA_API_KEY")
+API_URL = os.getenv("CLOVA_API_URL")
 
 
 headers = {
